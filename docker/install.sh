@@ -23,10 +23,10 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
 # Running Docker as normal user
-# sudo groupadd docker
-# sudo usermod -aG docker $USER
-# newgrp docker
-# sudo service docker restart
+sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
+sudo service docker restart
 
 # Start on boot
 sudo systemctl enable docker.service
