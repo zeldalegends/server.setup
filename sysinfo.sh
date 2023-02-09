@@ -1,8 +1,10 @@
 #!/bin/bash
 
-echo -e "System"
-uname -nrpv
-echo
+echo -e "Kernel"
+cat /etc/issue 
+# echo -e "System"
+# uname -nrpv
+# echo
 echo -e "CPU"
 cat /proc/cpuinfo|grep name
 echo
@@ -13,7 +15,7 @@ echo -e "Disks"
 df -h
 echo
 echo -e "Processes"
-ps acrux
+ps aux # acrux
 echo
 echo -e "Docker"
 docker ps -a --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"
