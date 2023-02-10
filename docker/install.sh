@@ -37,4 +37,6 @@ sudo systemctl enable containerd.service
 # sudo systemctl disable containerd.service
 
 # Verify installations
-docker -v
+docker info
+
+echo If Docker daemon is not started, run \"sudo reboot\". 
