@@ -17,8 +17,14 @@ echo
 echo -e "Processes"
 ps aux # acrux
 echo
+echo -e "Ports"
+sudo ss -tulpn
+echo
+echo -e "User and groups"
+id
+echo
 echo -e "Docker"
-docker ps -a --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"
+docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Status}}\t{{.Ports}}"
 echo
 echo Press Enter to see the real-time monitor...
 read key
