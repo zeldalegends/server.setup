@@ -2,6 +2,9 @@
 
 # Source: https://docs.docker.com/engine/install/ubuntu/#installation-methods
 
+# Update repositories and system
+apt update && apt upgrade -y # # apt-get update && apt-get upgrade -y
+
 # Uninstall old versions
 sudo apt remove docker docker-engine docker.io containerd runc
 
@@ -39,8 +42,7 @@ sudo service docker restart # sudo systemctl restart docker.service
 
 # Verify installations
 docker info
-# systemctl status docker.service
-sudo service docker status
+sudo service docker status # systemctl status docker.service
 
 echo Press Enter to reboot, CTRL+C to terminate...
 read key
